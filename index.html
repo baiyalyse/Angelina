@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy birthday</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <audio src="music.m4a" id="bgMusic" autoplay loop></audio>
+  <h1 class="title">C днем рождения, Ангелина!</h1>
+
+  <button id="showBtn" class="btn">Знаешь что... 💖</button>
+
+  <div id="complimentsContainer" class="compliments-container"></div>
+    </div>
+  </div>
+
+  <div class="background-flowers">
+<svg
+  class="background-svg"
+  width="100%" height="100%"
+  viewBox="0 0 800 600"
+  preserveAspectRatio="xMidYMid meet"
+  xmlns="http://www.w3.org/2000/svg"
+  style="position: fixed; top: 0; left: 0; z-index: -1; pointer-events: none;"
+>
+  <!-- Цветок 1 -->
+  <circle cx="150" cy="120" r="30" fill="pink" opacity="0.6">
+    <animate
+      attributeName="opacity"
+      values="0.3;0.6;0.3"
+      dur="6s"
+      repeatCount="indefinite"
+      begin="0s"
+    />
+  </circle>
+
+  <!-- Цветок 2 -->
+  <circle cx="650" cy="400" r="25" fill="#f9aecb" opacity="0.5">
+    <animate
+      attributeName="opacity"
+      values="0.2;0.5;0.2"
+      dur="5s"
+      repeatCount="indefinite"
+      begin="1s"
+    />
+  </circle>
+
+  <!-- Цветок 3 -->
+  <circle cx="400" cy="300" r="40" fill="#f7c1d8" opacity="0.4">
+    <animate
+      attributeName="opacity"
+      values="0.2;0.4;0.2"
+      dur="7s"
+      repeatCount="indefinite"
+      begin="2s"
+    />
+  </circle>
+
+  <!-- Цветок 4 с легким движением -->
+  <circle cx="300" cy="500" r="35" fill="#fbd6e0" opacity="0.5">
+    <animateMotion
+      dur="10s"
+      repeatCount="indefinite"
+      path="M0 0 Q20 10 0 20 Q-20 10 0 0"
+      begin="0s"
+    />
+    <animate
+      attributeName="opacity"
+      values="0.3;0.5;0.3"
+      dur="10s"
+      repeatCount="indefinite"
+      begin="0s"
+    />
+  </circle>
+
+</svg>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

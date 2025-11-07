@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fdeff9 0%, #fff1f1 100%);
+  color: #4b3a5a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+
+.btn {
+  width: 280px;
+  max-width: 90vw;
+  padding: 0.8rem 0;
+  background: #f8c7d1;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #722244;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(248, 199, 209, 0.5);
+  transition: background 0.3s ease;
+  margin-bottom: 1.8rem;
+}
+
+.btn:hover {
+  background: #e49ab1;
+}
+
+.compliments-container {
+  width: 320px;
+  max-width: 95vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 3rem;
+}
+
+.compliment {
+  background: #f9d9e1;
+  border-radius: 18px;
+  padding: 0.9rem 1.2rem;
+  color: #5a3751;
+  font-weight: 500;
+  font-size: 1rem;
+  max-width: 90%;
+  opacity: 0;
+  transform: translateY(20px);
+  /* Анимация появления будет через JS */
+}
+
+.compliment.left {
+  align-self: flex-start;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.compliment.right {
+  align-self: flex-end;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.wish-section {
+  width: 320px;
+  max-width: 95vw;
+  background: #f8c7d1;
+  border-radius: 22px;
+  padding: 1.5rem 1.8rem;
+  color: #5a3751;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.wish-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.photo-sign {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 3px 8px rgba(215, 145, 155, 0.7);
+  margin-bottom: 0.5rem;
+}
+
+.signature {
+  font-style: italic;
+  font-weight: 700;
+  color: #6f365a;
+}
+
+/* Фоновые цветы (простой пример) */
+.background-flowers {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 20% 30%, #f9d9e1, transparent 30%),
+    radial-gradient(circle at 80% 80%, #fbd9e5, transparent 35%),
+    radial-gradient(circle at 50% 10%, #fcdde1, transparent 40%);
+  z-index: -1;
+  animation: gentleMove 15s ease-in-out infinite alternate;
+}
+
+@keyframes gentleMove {
+  0% { background-position: 20% 30%, 80% 80%, 50% 10%; }
+  100% { background-position: 25% 35%, 85% 85%, 55% 15%; }
+}
+
+/* Появление заголовка */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
